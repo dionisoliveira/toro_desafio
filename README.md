@@ -17,6 +17,22 @@
  <img src="https://user-images.githubusercontent.com/11008585/71061808-adc53a80-2147-11ea-8cc6-e4c12741f72c.gif" alt="Example" width="200" height="450">
 
 
+Flutter 
+Dependências necessárias.
+cupertino_icons: ^0.1.2
+  #adicionar websocket
+  web_socket_channel: "^1.0.8"
+
+  #adicionar gráfico de linha
+  flutter_sparkline: "^0.1.0"
+  
+  #formatar para currency
+  intl: "^0.15.8"
+
+Detalhes:
+CotacaoListExtend é criada através do inicializador Initialize, que controla o objeto singleton para a listView, com isto a lista passa a ser compartilhada entre a tela de Baixas e Altas mantendo atualizado os dados da tela quando a mesma não esta no foco da aplicação.
+
+Padrão BLoC não foi utilizado na brench master.
 
 
 
