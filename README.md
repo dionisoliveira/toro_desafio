@@ -1,4 +1,7 @@
 # Desafio Mobile
+
+[![Actions Status](https://xxx.execute-api.us-west-2.amazonaws.com/production/badge/dionisoliveira/toro_desafio)](https://xxx.execute-api.us-west-2.amazonaws.com/production/results/dionisoliveira/toro_desafio)
+
 <table>
   <thread>
     <th>Baixa </th>
