@@ -16,8 +16,5 @@ jobs:
 
    
 
-    - name: build apk
-      uses: steebchen/flutter@v1.0.0
-      with:
-        args: build apk --release
+   
     
