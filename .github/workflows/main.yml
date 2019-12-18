@@ -13,7 +13,10 @@ jobs:
     
       with:
         args: pub get
-
+    - name : executar testes 
+      uses : steebchen/flutter@v1.0.0 
+      with :
+         args : test
     - name : build apk 
 
    
