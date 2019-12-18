@@ -27,7 +27,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+
+
+#adicionar websocket
   web_socket_channel: "^1.0.8"
+
+  #adicionar gráfico de linha
+  flutter_sparkline: "^0.1.0"
+  #formatar para currency
+  intl: "^0.15.8"
 
 
 dev_dependencies:
