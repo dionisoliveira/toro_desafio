@@ -18,10 +18,13 @@
 
 
 Flutter 
-Dependências necessárias.
-cupertino_icons: ^0.1.2
+  Dependências necessárias.
+  
+  cupertino_icons: ^0.1.2
+
   #adicionar websocket
   web_socket_channel: "^1.0.8"
+  
 
   #adicionar gráfico de linha
   flutter_sparkline: "^0.1.0"
