@@ -22,6 +22,8 @@ class Cotacao {
     this.data = DateTime.now();
   }
 
+
+  //Converte json map para o objeto cotacão
   factory Cotacao.fromJson(Map<String, dynamic> json) => new Cotacao(
         nome: json.keys.first.toString(),
         valor: double.parse(json.values.first.toString()),
@@ -30,6 +32,7 @@ class Cotacao {
         data: DateTime.now());
 
 
+  //Recuper a cor que deve ser aplicado no backgroundo do percentual e na cor da linha do gráfico
    Color GetColor()
    {
      if(this.percentual == 0)
@@ -41,6 +44,7 @@ class Cotacao {
 
 
    }
+
 
    String GetValorAbertura()
    {

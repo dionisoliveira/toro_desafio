@@ -6,7 +6,7 @@ class CotacaoListExtend extends ListBase<Cotacao> {
   static CotacaoListExtend listExtend;
 
   final  List<Cotacao> l = [];
-  final  List<Cotacao> updateLists = []; //Cache da cotação - não permite replicar cotação já adicionada na lista.
+  final  List<Cotacao> _updateLists = []; //Cache da cotação - não permite replicar cotação já adicionada na lista.
   CotacaoListExtend();
 
   //Criado objeto Singleton para suportar compartilhamento do mesmo objeto entre duas telas.
@@ -36,7 +36,7 @@ class CotacaoListExtend extends ListBase<Cotacao> {
   @override
   void add(Cotacao element) {
 
-    var updateList = updateLists.where((p) => p.nome == element.nome);
+    var updateList = _updateLists.where((p) => p.nome == element.nome);
 
     if (updateList.length > 0) {
       //Refatorar:Adicionar esta regra dentro do objeto cotacao.Dart.
@@ -54,7 +54,7 @@ class CotacaoListExtend extends ListBase<Cotacao> {
           calcularVariacaoDaAcao(ultimaCotacao, valor);
       updateList.first.cotacaoCache.add(element);
     } else {
-      updateLists.add(element);
+      _updateLists.add(element);
       super.add(element);
     }
   }
@@ -75,7 +75,7 @@ class CotacaoListExtend extends ListBase<Cotacao> {
   List<Cotacao> getUltimasAltas()
   {
     //Adiciona somente itens necessários para ordenação de alta
-    var listDeAltas =this.updateLists.where((p)=>p.percentual > 0).toList();
+    var listDeAltas =this._updateLists.where((p)=>p.percentual > 0).toList();
     listDeAltas.sort((a, b) => b.percentual.compareTo(a.percentual));
     return listDeAltas.take(10).toList();
   }
@@ -84,7 +84,7 @@ class CotacaoListExtend extends ListBase<Cotacao> {
   List<Cotacao> getUltimasBaixas()
   {
     //Adiciona somente itens necessários para ordenação de baixa
-    var listDeBaixas =this.updateLists.where((p)=>p.percentual < 0).toList();
+    var listDeBaixas =this._updateLists.where((p)=>p.percentual < 0).toList();
 
     listDeBaixas.sort((a, b) => a.percentual.compareTo(b.percentual));
     return listDeBaixas.where((p)=>p.percentual < 0 ).take(10).toList();
@@ -94,7 +94,7 @@ class CotacaoListExtend extends ListBase<Cotacao> {
   List<Cotacao> getTodasCotacoes()
   {
     //Adiciona somente itens necessários para ordenação de baixa
-    var todosList =this.updateLists.toList();
+    var todosList =this._updateLists.toList();
 
     todosList.sort((a, b) => a.percentual.compareTo(b.percentual));
     return todosList.toList();
