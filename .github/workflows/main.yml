@@ -21,6 +21,8 @@ jobs:
       uses: JantHsueh/get-apk-info-action@1.0
       with: 
         apkPath: app/build/outputs/apk/release/app-release.apk
+    - name: Debug APK Publisher
+      uses: ShaunLWM/action-release-debugapk@0.0.5
 
     
     
