@@ -3,7 +3,7 @@ name: CI
 on: push
 
 jobs:
-  build:
+ build:
     name: install dependencies
     runs-on: ubuntu-latest
     steps:
@@ -13,6 +13,11 @@ jobs:
       uses: steebchen/flutter@v1.0.0
       with:
         args: pub get
-    - run: flutter pub get
-    - run: flutter build apk
+
+   
+
+    - name: build apk
+      uses: steebchen/flutter@v1.0.0
+      with:
+        args: build apk --release
     
