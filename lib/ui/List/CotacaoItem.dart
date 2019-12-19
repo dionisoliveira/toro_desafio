@@ -24,10 +24,10 @@ class CotacaoItemCard extends StatelessWidget {
                     GetNomeCotacao(),
                     GetGrafico(),
                     GetCotacaoValor(),
-                    //stockDifference(stock),
+                   
                   ]),
 
-              //stockGraph3(stock)
+             
             ],
           ),
         ),
