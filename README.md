@@ -38,7 +38,7 @@ Flutter
 Detalhes:
 CotacaoListExtend é criada através do inicializador Initialize, que controla o objeto singleton para a listView, com isto a lista passa a ser compartilhada entre a tela de Baixas e Altas mantendo atualizado os dados da tela quando a mesma não esta no foco da aplicação.
 
-Padrão BLoC não foi utilizado na brench master.
+Padrão BLoC não foi utilizado na branch master.
 
 
 
