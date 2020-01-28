@@ -1,5 +1,7 @@
 # Desafio Flutter.
 
+ Projeto desenvolvido em Flutter que recebe diversas cotações através de um websocket local.
+ 
 [![Actions Status](https://github.com/dionisoliveira/toro_desafio/workflows/CI/badge.svg)](https://github.com/dionisoliveira/toro_desafio/actions)
 
 <table>
