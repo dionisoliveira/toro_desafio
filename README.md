@@ -1,4 +1,4 @@
-# Desafio Mobile
+# Desafio Flutter.
 
 [![Actions Status](https://github.com/dionisoliveira/toro_desafio/workflows/CI/badge.svg)](https://github.com/dionisoliveira/toro_desafio/actions)
 
